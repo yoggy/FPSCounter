@@ -25,7 +25,9 @@ class FPSCounter
 {
 public:
 	FPSCounter(const std::string &name = "FPSCounter", const int &check_count = 100, const bool &debug_output = false);
-
+	FPSCounter(const FPSCounter &obj);
+	FPSCounter& operator=(const FPSCounter &obj);
+	static void copy(const FPSCounter &src, FPSCounter &dst);
 	virtual ~FPSCounter();
 
 	void clear();

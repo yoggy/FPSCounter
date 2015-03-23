@@ -18,6 +18,29 @@ FPSCounter::FPSCounter(const std::string &name, const int &check_count, const bo
 	clear();
 }
 
+FPSCounter::FPSCounter(const FPSCounter &obj)
+{
+	copy(obj, *this);
+}
+
+FPSCounter& FPSCounter::operator=(const FPSCounter &obj)
+{
+	copy(obj, *this);
+	return *this;
+}
+
+void FPSCounter::copy(const FPSCounter &src, FPSCounter &dst)
+{
+	dst.name_ = src.name_;
+	dst.check_count_ = src.check_count_;
+	dst.debug_output_ = src.debug_output_;
+
+	dst.st_ = src.st_;
+	dst.count_ = src.count_;
+	dst.t_ = src.t_;
+	dst.fps_ = src.fps_;
+}
+
 FPSCounter::~FPSCounter()
 {
 
