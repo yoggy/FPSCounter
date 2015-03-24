@@ -1,10 +1,13 @@
 //
 // main-FPSCounter-sample.cpp : Comparison of Sleep() and timeSetEvent() for accuracy
 //
+// github:
+//     https://github.com/yoggy/FPSCounter
+//
 // license:
-// Copyright (c) 2015 yoggy <yoggy0@gmail.com>
-// Released under the MIT license
-// http://opensource.org/licenses/mit-license.php
+//     Copyright (c) 2015 yoggy <yoggy0@gmail.com>
+//     Released under the MIT license
+//     http://opensource.org/licenses/mit-license.php
 //
 #define WIN32_LEAN_AND_MEAN
 #include <Windows.h>
